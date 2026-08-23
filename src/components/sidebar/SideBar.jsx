@@ -60,6 +60,7 @@ export default function SideBar() {
       <div>
         <SideBarButton buttonText={"Log Out"} icon={logoutIcon} />
       </div>
+      <p>test</p>
     </div>
   );
 }
