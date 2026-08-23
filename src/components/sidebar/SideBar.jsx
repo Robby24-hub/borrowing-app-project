@@ -4,7 +4,6 @@ import borrowIcon from "/images/hand-helping.png";
 import peopleIcon from "/images/users-round.png";
 import settingsIcon from "/images/settings.png";
 import logoutIcon from "/images/log-out.png";
-
 import SideBarButton from "./SIdeBarButton";
 import { NavLink } from "react-router";
 
