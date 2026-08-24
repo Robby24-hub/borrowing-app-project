@@ -19,5 +19,5 @@
 }
 
 @utility tdataHead {
-  @apply font-semibold;
+  @apply font-semibold text-primaryBlue;
 }
