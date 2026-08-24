@@ -1,6 +1,7 @@
 import DataSummary from "./DataSummary";
 import OverdueItems from "./OverdueItems";
 import QuickActions from "./QuickActions";
+import RecentActivities from "./RecentActivities";
 
 export default function HomePage() {
   return (
@@ -14,39 +15,7 @@ export default function HomePage() {
       <QuickActions />
       <OverdueItems />
 
-      <div>
-        <h1>Recent Activity</h1>
-        <div>
-          <p>Nintendo Switch</p>
-          <p>Borrowed</p>
-          <p>John</p>
-          <p>Monday, 8/23/2026</p>
-        </div>
-        <div>
-          <p>Nintendo Switch</p>
-          <p>Borrowed</p>
-          <p>John</p>
-          <p>Monday, 8/23/2026</p>
-        </div>
-        <div>
-          <p>Nintendo Switch</p>
-          <p>Borrowed</p>
-          <p>John</p>
-          <p>Monday, 8/23/2026</p>
-        </div>
-        <div>
-          <p>Nintendo Switch</p>
-          <p>Borrowed</p>
-          <p>John</p>
-          <p>Monday, 8/23/2026</p>
-        </div>
-        <div>
-          <p>Nintendo Switch</p>
-          <p>Borrowed</p>
-          <p>John</p>
-          <p>Monday, 8/23/2026</p>
-        </div>
-      </div>
+      <RecentActivities />
     </div>
   );
 }

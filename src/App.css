@@ -15,7 +15,7 @@
 }
 
 @utility tdata {
-  @apply ml-8;
+  @apply ml-8 mr-4;
 }
 
 @utility tdataHead {

@@ -1,3 +1,5 @@
+import dayjs from "dayjs";
+
 export default function OverdueItems() {
   const overdueItems = [
     {
@@ -40,7 +42,7 @@ export default function OverdueItems() {
   return (
     <div>
       <h1 className="text-xl font-semibold mb-2">Overdue Items</h1>
-      <div className="border-2 border-primaryBlue rounded-lg overflow-hidden w-fit shadow-xl">
+      <div className="border-2 border-primaryBlue rounded-lg overflow-hidden w-fit shadow-xl mb-5">
         <div className="bg-grayishWhite trow ">
           <p className="tdata tdataHead">Item</p>
           <p className="tdata tdataHead">Borrower</p>
@@ -53,7 +55,9 @@ export default function OverdueItems() {
               <div className="trow" key={item.id}>
                 <p className="tdata">{item.item}</p>
                 <p className="tdata">{item.borrower}</p>
-                <p className="tdata">{item.dueDate}</p>
+                <p className="tdata">
+                  {dayjs(item.dueDate).format("MMM D, YYYY")}
+                </p>
                 <p className="tdata text-[#f15368] font-semibold">
                   {item.status}
                 </p>
