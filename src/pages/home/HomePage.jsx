@@ -1,40 +1,16 @@
+import DataSummary from "./DataSummary";
+import QuickActions from "./QuickActions";
+
 export default function HomePage() {
   return (
     <div>
-      <div>
-        <h1>Hello, Robby!</h1>
-        <p>This is what's happening with your inventory</p>
+      <div className="mb-4">
+        <h1 className="text-2xl font-semibold">Hello, Robby!</h1>
+        <p>This is what's happening with your inventory.</p>
       </div>
-      <div>
-        <div>
-          <img />
-          <h1>Total Items</h1>
-          <p>123</p>
-        </div>
-        <div>
-          <img />
-          <h1>Borrowed</h1>
-          <p>23</p>
-        </div>
-        <div>
-          <img />
-          <h1>Available</h1>
-          <p>100</p>
-        </div>
-        <div>
-          <img />
-          <h1>Overdue</h1>
-          <p>3</p>
-        </div>
-      </div>
-      <div>
-        <h1>Quick Actions</h1>
-        <div>
-          <button>Add Item</button>
-          <button>Add Person</button>
-          <button>Borrow Item</button>
-        </div>
-      </div>
+      <DataSummary />
+
+      <QuickActions />
       <div>
         <h1>Recent Activity</h1>
         <div>
