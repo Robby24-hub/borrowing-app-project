@@ -40,12 +40,12 @@ export default function OverdueItems() {
   return (
     <div>
       <h1 className="text-xl font-semibold mb-2">Overdue Items</h1>
-      <div className="border-2 border-primaryBlue rounded-lg overflow-hidden w-fit">
+      <div className="border-2 border-primaryBlue rounded-lg overflow-hidden w-fit shadow-xl">
         <div className="bg-grayishWhite trow ">
           <p className="tdata tdataHead">Item</p>
           <p className="tdata tdataHead">Borrower</p>
           <p className="tdata tdataHead">Due Date</p>
-          <p className="tdata tdataHead"></p>
+          <p className="tdata tdataHeadx"></p>
         </div>
         <div>
           {overdueItems.map((item) => {
