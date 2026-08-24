@@ -14,6 +14,10 @@
   @apply grid grid-cols-4 px-2 py-1.5;
 }
 
+@utility trow-recent-act {
+  @apply grid grid-cols-[200px_120px_120px_250px] px-2 py-1.5;
+}
+
 @utility tdata {
   @apply ml-8 mr-4;
 }

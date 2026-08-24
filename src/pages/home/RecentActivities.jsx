@@ -42,7 +42,7 @@ export default function RecentActivities() {
     <div>
       <h1 className="text-xl font-semibold mb-2 ">Recent Activity</h1>
       <div className="border-2 border-primaryBlue rounded-lg overflow-hidden w-fit shadow-xl mb-5">
-        <div className="bg-grayishWhite trow ">
+        <div className="bg-grayishWhite trow-recent-act">
           <p className="tdata tdataHead">Item</p>
           <p className="tdata tdataHead">Action</p>
           <p className="tdata tdataHead">Person</p>
@@ -51,7 +51,7 @@ export default function RecentActivities() {
         </div>
         {recentActivities.map((activity) => {
           return (
-            <div className="trow" key={activity.id}>
+            <div className="trow-recent-act" key={activity.id}>
               <p className="tdata">{activity.item}</p>
               <p className="tdata">{activity.action}</p>
               <p className="tdata">{activity.person}</p>
