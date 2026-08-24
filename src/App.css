@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primaryBlue: #386aed;
+  --color-dark: #0c243c;
+  --color-grayishWhite: #dfe5ec;
+}
+
+@utility quick-action-button {
+  @apply hover:bg-primaryBlue p-2 rounded-md mx-4 border border-primaryBlue hover:text-white font-semibold cursor-pointer bg-white text-primaryBlue transition-all duration-300;
+}

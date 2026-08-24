@@ -12,6 +12,27 @@ export default function HomePage() {
 
       <QuickActions />
       <div>
+        <h1>Overdue Items</h1>
+        <div>
+          <p>Stapler</p>
+          <p>John</p>
+          <p>8/18/2026</p>
+          <p>OVERDUE</p>
+        </div>
+        <div>
+          <p>Stapler</p>
+          <p>John</p>
+          <p>8/18/2026</p>
+          <p>OVERDUE</p>
+        </div>
+        <div>
+          <p>Stapler</p>
+          <p>John</p>
+          <p>8/18/2026</p>
+          <p>OVERDUE</p>
+        </div>
+      </div>
+      <div>
         <h1>Recent Activity</h1>
         <div>
           <p>Nintendo Switch</p>
@@ -42,27 +63,6 @@ export default function HomePage() {
           <p>Borrowed</p>
           <p>John</p>
           <p>Monday, 8/23/2026</p>
-        </div>
-      </div>
-      <div>
-        <h1>Overdue Items</h1>
-        <div>
-          <p>Stapler</p>
-          <p>John</p>
-          <p>8/18/2026</p>
-          <p>OVERDUE</p>
-        </div>
-        <div>
-          <p>Stapler</p>
-          <p>John</p>
-          <p>8/18/2026</p>
-          <p>OVERDUE</p>
-        </div>
-        <div>
-          <p>Stapler</p>
-          <p>John</p>
-          <p>8/18/2026</p>
-          <p>OVERDUE</p>
         </div>
       </div>
     </div>
