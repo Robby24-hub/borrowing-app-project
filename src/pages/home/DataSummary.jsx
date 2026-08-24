@@ -25,7 +25,7 @@ export default function DataSummary() {
       id: 4,
       image: "/images/clock-alert-red.png",
       title: "Overdue",
-      value: 8,
+      value: 5,
       description: "Past due date",
     },
   ];
@@ -37,7 +37,7 @@ export default function DataSummary() {
           <div
             key={boxItem.id}
             className={`border-2 p-4 rounded-lg w-70 flex flex-row
-                ${boxItem.title === "Total Items" && "border-[#386aed] bg-[#386aed]/15"}
+                ${boxItem.title === "Total Items" && "border-primaryBlue bg-primaryBlue/15"}
                 ${boxItem.title === "Borrowed" && "border-[#facb4e] bg-[#facb4e]/15"}
                 ${boxItem.title === "Available" && "border-[#47e79f] bg-[#47e79f]/15"}
                 ${boxItem.title === "Overdue" && "border-[#f15368] bg-[#f15368]/15"}`}

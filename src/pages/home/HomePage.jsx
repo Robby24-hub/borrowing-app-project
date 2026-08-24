@@ -1,4 +1,5 @@
 import DataSummary from "./DataSummary";
+import OverdueItems from "./OverdueItems";
 import QuickActions from "./QuickActions";
 
 export default function HomePage() {
@@ -11,27 +12,8 @@ export default function HomePage() {
       <DataSummary />
 
       <QuickActions />
-      <div>
-        <h1>Overdue Items</h1>
-        <div>
-          <p>Stapler</p>
-          <p>John</p>
-          <p>8/18/2026</p>
-          <p>OVERDUE</p>
-        </div>
-        <div>
-          <p>Stapler</p>
-          <p>John</p>
-          <p>8/18/2026</p>
-          <p>OVERDUE</p>
-        </div>
-        <div>
-          <p>Stapler</p>
-          <p>John</p>
-          <p>8/18/2026</p>
-          <p>OVERDUE</p>
-        </div>
-      </div>
+      <OverdueItems />
+
       <div>
         <h1>Recent Activity</h1>
         <div>

@@ -1,6 +1,6 @@
 export default function QuickActions() {
   return (
-    <div>
+    <div className="mb-5">
       <h1 className="text-xl font-semibold mb-2">Quick Actions</h1>
       <div className="flex flex-row justify-between border-2 border-primaryBlue rounded-lg w-fit px-3 py-5">
         <button className="quick-action-button">+ Add Item</button>

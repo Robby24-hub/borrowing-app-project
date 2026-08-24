@@ -15,7 +15,7 @@ export default function SideBarButton({
   return (
     <button
       className={`flex flex-row my-2 w-full rounded-lg py-3 px-5 cursor-pointer  transition-all duration-300 
-        ${isActive ? "bg-[#0c243c] text-white" : "hover:bg-[#386aed] hover:text-white"}`}
+        ${isActive ? "bg-dark text-white" : "hover:bg-primaryBlue hover:text-white"}`}
       onMouseEnter={handleSideBarButtonHover}
       onMouseLeave={handleSideBarButtonHover}
     >

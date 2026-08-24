@@ -9,3 +9,15 @@
 @utility quick-action-button {
   @apply hover:bg-primaryBlue p-2 rounded-md mx-4 border border-primaryBlue hover:text-white font-semibold cursor-pointer bg-white text-primaryBlue transition-all duration-300;
 }
+
+@utility trow {
+  @apply grid grid-cols-4 px-2 py-1.5;
+}
+
+@utility tdata {
+  @apply ml-8;
+}
+
+@utility tdataHead {
+  @apply font-semibold;
+}
