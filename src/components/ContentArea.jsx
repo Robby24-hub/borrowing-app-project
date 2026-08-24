@@ -8,7 +8,7 @@ import PageNotFound from "../pages/PageNotFound";
 
 export default function ContentArea() {
   return (
-    <div className="grow h-full bg-[#23393f]">
+    <div className="w-[calc(100%-200px)] ml-50 h-[calc(100%-76px)] mt-19 bg-white p-10">
       <Routes>
         <Route index element={<HomePage />} />
         <Route path="/inventory" element={<InventoryPage />} />

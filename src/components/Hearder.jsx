@@ -2,12 +2,10 @@ import accountActionsImg from "/images/account-down-actions.png";
 
 export default function Header() {
   return (
-    <div className="bg-[#0d1920] flex items-center flex-row justify-between w-full px-10 py-3 h-19">
+    <div className="fixed bg-[#386aed] flex items-center flex-row justify-between w-full px-10 py-3 h-19 text-white">
       <div className="">
         <h1 className="cursor-pointer font-bold text-3xl">
-          <span className="text-[#f15368]">Just</span>
-          <span className="text-[#facb4e]">Return</span>
-          <span className="text-[#47e79f]">It</span>
+          <span className="text-[#0c243c]">JusReturnIt</span>
           <span className="text-white">.com</span>
         </h1>
         <h2>Borrowing Web App by Robby</h2>

@@ -5,7 +5,7 @@ import ContentArea from "./components/ContentArea";
 
 function App() {
   return (
-    <div className="text-white h-screen flex flex-col">
+    <div className="h-screen flex flex-col">
       <Header />
       <div className="flex flex-row w-full grow">
         <SideBar />
