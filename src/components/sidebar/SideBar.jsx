@@ -15,7 +15,7 @@ import { NavLink } from "react-router";
 
 export default function SideBar() {
   return (
-    <div className="fixed h-[calc(100vh-76px)] mt-19  w-50 flex flex-col justify-between py-5 px-3 bg-[#dfe5ec]">
+    <div className="fixed h-[calc(100vh-76px)] mt-19  w-50 flex flex-col justify-between py-5 px-3 bg-grayishWhite">
       <div className="">
         <NavLink to="/">
           {({ isActive }) => (

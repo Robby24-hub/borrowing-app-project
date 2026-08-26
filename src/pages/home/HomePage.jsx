@@ -11,10 +11,8 @@ export default function HomePage() {
         <p>This is what's happening with your inventory.</p>
       </div>
       <DataSummary />
-
       <QuickActions />
       <OverdueItems />
-
       <RecentActivities />
     </div>
   );

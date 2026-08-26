@@ -42,30 +42,26 @@ export default function OverdueItems() {
   return (
     <div>
       <h1 className="text-xl font-semibold mb-2">Overdue Items</h1>
-      <div className="border-2 border-primaryBlue rounded-lg overflow-hidden w-fit shadow-xl mb-5">
-        <div className="bg-grayishWhite trow ">
+      {/* <div className="border-2 border-primaryBlue rounded-lg overflow-hidden w-fit shadow-xl mb-5"> */}
+      {/* <div className="bg-grayishWhite trow ">
           <p className="tdata tdataHead">Item</p>
           <p className="tdata tdataHead">Borrower</p>
           <p className="tdata tdataHead">Due Date</p>
           <p className="tdata tdataHeadx"></p>
-        </div>
-        <div>
-          {overdueItems.map((item) => {
-            return (
-              <div className="trow" key={item.id}>
-                <p className="tdata">{item.item}</p>
-                <p className="tdata">{item.borrower}</p>
-                <p className="tdata">
-                  {dayjs(item.dueDate).format("MMM D, YYYY")}
-                </p>
-                <p className="tdata text-[#f15368] font-semibold">
-                  {item.status}
-                </p>
-              </div>
-            );
-          })}
-        </div>
+        </div> */}
+      <div>
+        {overdueItems.map((item) => {
+          return (
+            <div className="border border-primaryBlue" key={item.id}>
+              <p className="">{item.item}</p>
+              <p className="">{item.borrower}</p>
+              <p className="">{dayjs(item.dueDate).format("MMM D, YYYY")}</p>
+              <p className="text-[#f15368] font-semibold">{item.status}</p>
+            </div>
+          );
+        })}
       </div>
+      {/* </div> */}
     </div>
   );
 }
