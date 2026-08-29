@@ -3,35 +3,35 @@ import dayjs from "dayjs";
 export default function RecentActivities() {
   const recentActivities = [
     {
-      id: crypto.randomUUID,
+      id: crypto.randomUUID(),
       item: "Nintendo Switch",
       action: "Borrowed",
       person: "John",
       date: "2026-08-23T09:15:00",
     },
     {
-      id: crypto.randomUUID,
+      id: crypto.randomUUID(),
       item: "Canon EOS Camera",
       action: "Returned",
       person: "Maria",
       date: "2026-08-23T11:40:00",
     },
     {
-      id: crypto.randomUUID,
+      id: crypto.randomUUID(),
       item: "Projector",
       action: "Borrowed",
       person: "Alex",
       date: "2026-08-22T13:25:00",
     },
     {
-      id: crypto.randomUUID,
+      id: crypto.randomUUID(),
       item: "MacBook Air",
       action: "Returned",
       person: "Sarah",
       date: "2026-08-22T15:50:00",
     },
     {
-      id: crypto.randomUUID,
+      id: crypto.randomUUID(),
       item: "Wireless Microphone",
       action: "Borrowed",
       person: "David",

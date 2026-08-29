@@ -4,7 +4,7 @@ import { ClockAlertIcon, UserRoundIcon } from "lucide-react";
 export default function OverdueItems() {
   const overdueItems = [
     {
-      id: crypto.randomUUID,
+      id: crypto.randomUUID(),
       item: "Stapler",
       image: "/images/stapler.png",
       borrower: "John",
@@ -12,7 +12,7 @@ export default function OverdueItems() {
       status: "OVERDUE",
     },
     {
-      id: crypto.randomUUID,
+      id: crypto.randomUUID(),
       item: "Laptop",
       image: "/images/laptop.png",
       borrower: "Maria",
@@ -20,7 +20,7 @@ export default function OverdueItems() {
       status: "OVERDUE",
     },
     {
-      id: crypto.randomUUID,
+      id: crypto.randomUUID(),
       item: "Projector",
       image: "/images/projector.png",
       borrower: "Alex",
@@ -28,7 +28,7 @@ export default function OverdueItems() {
       status: "OVERDUE",
     },
     {
-      id: crypto.randomUUID,
+      id: crypto.randomUUID(),
       item: "Wireless Mouse",
       borrower: "Sarah",
       image: "/images/wireless-mouse.png",
@@ -36,7 +36,7 @@ export default function OverdueItems() {
       status: "OVERDUE",
     },
     {
-      id: crypto.randomUUID,
+      id: crypto.randomUUID(),
       item: "HDMI Cable",
       image: "/images/hdmi-cable.png",
       borrower: "Michael",
