@@ -7,8 +7,13 @@
 }
 
 @utility quick-action-button {
-  @apply hover:bg-primaryBlue text-sm p-2 rounded-md mx-4 border border-primaryBlue hover:text-white font-semibold
+  @apply hover:bg-primaryBlue text-sm px-3 py-2 rounded-md mx-2 border border-primaryBlue hover:text-white font-semibold
           flex flex-row justify-center items-center gap-3 cursor-pointer bg-white text-primaryBlue transition-all duration-300;
+}
+
+@utility inventory-button {
+  @apply hover:bg-primaryBlue hover:border-primaryBlue text-sm px-3 py-2 rounded-md mx-2 border border-black/50 hover:text-white font-semibold
+          flex flex-row justify-center items-center gap-3 cursor-pointer bg-white text-black/80 transition-all duration-300;
 }
 
 @utility trow {
