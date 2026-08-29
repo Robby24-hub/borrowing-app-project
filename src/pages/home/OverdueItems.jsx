@@ -6,6 +6,7 @@ export default function OverdueItems() {
     {
       id: crypto.randomUUID,
       item: "Stapler",
+      image: "/images/stapler.png",
       borrower: "John",
       dueDate: "2026-08-18",
       status: "OVERDUE",
@@ -13,6 +14,7 @@ export default function OverdueItems() {
     {
       id: crypto.randomUUID,
       item: "Laptop",
+      image: "/images/laptop.png",
       borrower: "Maria",
       dueDate: "2026-08-17",
       status: "OVERDUE",
@@ -20,6 +22,7 @@ export default function OverdueItems() {
     {
       id: crypto.randomUUID,
       item: "Projector",
+      image: "/images/projector.png",
       borrower: "Alex",
       dueDate: "2026-08-15",
       status: "OVERDUE",
@@ -28,12 +31,14 @@ export default function OverdueItems() {
       id: crypto.randomUUID,
       item: "Wireless Mouse",
       borrower: "Sarah",
+      image: "/images/wireless-mouse.png",
       dueDate: "2026-08-14",
       status: "OVERDUE",
     },
     {
       id: crypto.randomUUID,
       item: "HDMI Cable",
+      image: "/images/hdmi-cable.png",
       borrower: "Michael",
       dueDate: "2026-08-12",
       status: "OVERDUE",
@@ -50,9 +55,10 @@ export default function OverdueItems() {
               className="border border-primaryBlue flex flex-col items-center p-4 rounded-2xl shadow-xl "
               key={item.id}
             >
-              <div className="aspect-square w-30 border my-5">
-                <img />
-              </div>
+              <div
+                className="bg-cover bg-center overflow-hidden aspect-square w-30 border my-5"
+                style={{ backgroundImage: `url(${item.image})` }}
+              ></div>
               <p className="font-semibold text-xl mb-2">{item.item}</p>
               <div className="flex flex-row">
                 <UserRoundIcon className="w-5 mx-2" />

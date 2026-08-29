@@ -1,4 +1,4 @@
-import accountActionsImg from "/images/account-down-actions.png";
+import { ChevronDownIcon } from "lucide-react";
 
 export default function Header() {
   return (
@@ -18,7 +18,7 @@ export default function Header() {
         <div className="flex flex-row cursor-pointer">
           <h1>Robby</h1>
           <button>
-            <img className="aspect-square w-5 mx-5 " src={accountActionsImg} />
+            <ChevronDownIcon className="aspect-square w-5 mx-5 " />
           </button>
         </div>
       </div>
