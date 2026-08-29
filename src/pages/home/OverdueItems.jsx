@@ -1,4 +1,5 @@
 import dayjs from "dayjs";
+import { ClockAlertIcon, UserRoundIcon } from "lucide-react";
 
 export default function OverdueItems() {
   const overdueItems = [
@@ -42,20 +43,25 @@ export default function OverdueItems() {
   return (
     <div>
       <h1 className="text-xl font-semibold mb-2">Overdue Items</h1>
-      {/* <div className="border-2 border-primaryBlue rounded-lg overflow-hidden w-fit shadow-xl mb-5"> */}
-      {/* <div className="bg-grayishWhite trow ">
-          <p className="tdata tdataHead">Item</p>
-          <p className="tdata tdataHead">Borrower</p>
-          <p className="tdata tdataHead">Due Date</p>
-          <p className="tdata tdataHeadx"></p>
-        </div> */}
-      <div>
+      <div className="w-full grid gap-5 grid-cols-5 mb-5">
         {overdueItems.map((item) => {
           return (
-            <div className="border border-primaryBlue" key={item.id}>
-              <p className="">{item.item}</p>
-              <p className="">{item.borrower}</p>
-              <p className="">{dayjs(item.dueDate).format("MMM D, YYYY")}</p>
+            <div
+              className="border border-primaryBlue flex flex-col items-center p-4 rounded-2xl shadow-xl "
+              key={item.id}
+            >
+              <div className="aspect-square w-30 border my-5">
+                <img />
+              </div>
+              <p className="font-semibold text-xl mb-2">{item.item}</p>
+              <div className="flex flex-row">
+                <UserRoundIcon className="w-5 mx-2" />
+                <p className="">{item.borrower}</p>
+              </div>
+              <div className="flex flex-row">
+                <ClockAlertIcon className="w-5 mx-2" />
+                <p className="">{dayjs(item.dueDate).format("MMM D, YYYY")}</p>
+              </div>
               <p className="text-[#f15368] font-semibold">{item.status}</p>
             </div>
           );

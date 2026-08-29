@@ -1,29 +1,36 @@
+import {
+  BoxesIcon,
+  ClockAlertIcon,
+  HandHelpingIcon,
+  ListCheckIcon,
+} from "lucide-react";
+
 export default function DataSummary() {
   const summaryData = [
     {
       id: 1,
-      image: "/images/boxes-blue.png",
+      image: BoxesIcon,
       title: "Total Items",
       value: 248,
       description: "Items registered",
     },
     {
       id: 2,
-      image: "/images/hand-helping-yellow.png",
+      image: HandHelpingIcon,
       title: "Borrowed",
       value: 57,
       description: "Currently borrowed",
     },
     {
       id: 3,
-      image: "/images/list-check-green.png",
+      image: ListCheckIcon,
       title: "Available",
       value: 191,
       description: "Ready to borrow",
     },
     {
       id: 4,
-      image: "/images/clock-alert-red.png",
+      image: ClockAlertIcon,
       title: "Overdue",
       value: 5,
       description: "Past due date",
@@ -33,6 +40,8 @@ export default function DataSummary() {
   return (
     <div className="grid grid-cols-4 my-5 gap-4">
       {summaryData.map((boxItem) => {
+        const Icon = boxItem.image;
+
         return (
           <div
             key={boxItem.id}
@@ -42,7 +51,14 @@ export default function DataSummary() {
                 ${boxItem.title === "Available" && "border-[#47e79f] bg-[#47e79f]/15"}
                 ${boxItem.title === "Overdue" && "border-[#f15368] bg-[#f15368]/15"}`}
           >
-            <img className="aspect-square mr-3 w-15 h-15" src={boxItem.image} />
+            <Icon
+              className={`aspect-square mr-3 w-15 h-15
+              ${boxItem.title === "Total Items" && "text-primaryBlue"}
+              ${boxItem.title === "Borrowed" && "text-[#facb4e]"}
+              ${boxItem.title === "Available" && "text-[#47e79f]"}
+              ${boxItem.title === "Overdue" && "text-[#f15368]"}
+              `}
+            />
             <div>
               <h1 className="text-xl font-semibold">{boxItem.title}</h1>
               <p className="text-3xl font-bold">{boxItem.value}</p>
