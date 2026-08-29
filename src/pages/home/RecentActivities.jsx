@@ -41,7 +41,7 @@ export default function RecentActivities() {
   return (
     <div>
       <h1 className="text-xl font-semibold mb-2 ">Recent Activity</h1>
-      <div className="border-2 border-primaryBlue rounded-lg overflow-hidden w-fit shadow-xl mb-5">
+      <div className="bg-white border-2 border-primaryBlue rounded-lg overflow-hidden w-fit shadow-xl mb-5">
         <div className="bg-grayishWhite trow-recent-act">
           <p className="tdata tdataHead">Item</p>
           <p className="tdata tdataHead">Action</p>

@@ -1,11 +1,17 @@
+import { PlusIcon } from "lucide-react";
+
 export default function QuickActions() {
   return (
-    <div className="mb-5">
+    <div className="mb-5 ">
       <h1 className="text-xl font-semibold mb-2">Quick Actions</h1>
-      <div className="shadow-xl flex flex-row justify-between border-2 border-primaryBlue rounded-lg w-fit px-3 py-5">
-        <button className="quick-action-button">+ Add Item</button>
-        <button className="quick-action-button">+ Add Person</button>
-        <button className="quick-action-button">+ Lend Item</button>
+      <div className="bg-white shadow-xl flex flex-row justify-between border-2 border-primaryBlue rounded-lg w-fit p-3">
+        <button className="quick-action-button">{<PlusIcon />} Add Item</button>
+        <button className="quick-action-button">
+          {<PlusIcon />} Add Person
+        </button>
+        <button className="quick-action-button">
+          {<PlusIcon />} Lend Item
+        </button>
       </div>
     </div>
   );

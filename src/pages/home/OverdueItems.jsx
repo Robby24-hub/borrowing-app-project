@@ -52,7 +52,7 @@ export default function OverdueItems() {
         {overdueItems.map((item) => {
           return (
             <div
-              className="border border-primaryBlue flex flex-col items-center p-4 rounded-2xl shadow-xl "
+              className="bg-white border-2 border-primaryBlue flex flex-col items-center p-4 rounded-2xl shadow-xl "
               key={item.id}
             >
               <div
@@ -68,7 +68,7 @@ export default function OverdueItems() {
                 <ClockAlertIcon className="w-5 mx-2" />
                 <p className="">{dayjs(item.dueDate).format("MMM D, YYYY")}</p>
               </div>
-              <p className="text-[#f15368] font-semibold">{item.status}</p>
+              <p className="text-[#f15368] font-semibold mt-2">{item.status}</p>
             </div>
           );
         })}

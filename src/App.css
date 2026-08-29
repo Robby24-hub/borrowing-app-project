@@ -7,7 +7,8 @@
 }
 
 @utility quick-action-button {
-  @apply hover:bg-primaryBlue p-2 rounded-md mx-4 border border-primaryBlue hover:text-white font-semibold cursor-pointer bg-white text-primaryBlue transition-all duration-300;
+  @apply hover:bg-primaryBlue text-sm p-2 rounded-md mx-4 border border-primaryBlue hover:text-white font-semibold
+          flex flex-row justify-center items-center gap-3 cursor-pointer bg-white text-primaryBlue transition-all duration-300;
 }
 
 @utility trow {
