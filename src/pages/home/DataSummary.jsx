@@ -31,12 +31,12 @@ export default function DataSummary() {
   ];
 
   return (
-    <div className="grid grid-cols-4 my-5">
+    <div className="grid grid-cols-4 my-5 gap-4">
       {summaryData.map((boxItem) => {
         return (
           <div
             key={boxItem.id}
-            className={`shadow-xl border-2 p-4 rounded-lg w-70 flex flex-row
+            className={`shadow-xl border-2 p-4 rounded-lg flex flex-row
                 ${boxItem.title === "Total Items" && "border-primaryBlue bg-primaryBlue/15"}
                 ${boxItem.title === "Borrowed" && "border-[#facb4e] bg-[#facb4e]/15"}
                 ${boxItem.title === "Available" && "border-[#47e79f] bg-[#47e79f]/15"}
