@@ -47,16 +47,16 @@ export default function DataSummary() {
             key={boxItem.id}
             className={`shadow-xl border-2 p-4 rounded-lg flex flex-row
                 ${boxItem.title === "Total Items" && "border-primaryBlue bg-primaryBlue/15"}
-                ${boxItem.title === "Borrowed" && "border-[#facb4e] bg-[#facb4e]/15"}
-                ${boxItem.title === "Available" && "border-[#47e79f] bg-[#47e79f]/15"}
-                ${boxItem.title === "Overdue" && "border-[#f15368] bg-[#f15368]/15"}`}
+                ${boxItem.title === "Borrowed" && "border-borrowedYellow bg-borrowedYellow/15"}
+                ${boxItem.title === "Available" && "border-availableGreen bg-availableGreen/15"}
+                ${boxItem.title === "Overdue" && "border-overdueRed bg-overdueRed/15"}`}
           >
             <Icon
               className={`aspect-square mr-3 w-15 h-15
               ${boxItem.title === "Total Items" && "text-primaryBlue"}
-              ${boxItem.title === "Borrowed" && "text-[#facb4e]"}
-              ${boxItem.title === "Available" && "text-[#47e79f]"}
-              ${boxItem.title === "Overdue" && "text-[#f15368]"}
+              ${boxItem.title === "Borrowed" && "text-borrowedYellow"}
+              ${boxItem.title === "Available" && "text-availableGreen"}
+              ${boxItem.title === "Overdue" && "text-overdueRed"}
               `}
             />
             <div>

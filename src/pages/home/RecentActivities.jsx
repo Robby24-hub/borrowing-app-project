@@ -47,7 +47,6 @@ export default function RecentActivities() {
           <p className="tdata tdataHead">Action</p>
           <p className="tdata tdataHead">Person</p>
           <p className="tdata tdataHead">Due Date</p>
-          <p className="tdata tdataHeadx"></p>
         </div>
         {recentActivities.map((activity) => {
           return (

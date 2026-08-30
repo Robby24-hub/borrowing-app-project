@@ -73,7 +73,6 @@ export default function OverdueItems() {
           );
         })}
       </div>
-      {/* </div> */}
     </div>
   );
 }
