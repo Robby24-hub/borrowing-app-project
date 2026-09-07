@@ -3,7 +3,7 @@ import { ChevronDown, PlusIcon, SearchIcon } from "lucide-react";
 export default function Controls() {
   return (
     <div className="mb-5">
-      <div className="flex flex-col sm:flex-row gap-3 sm:gap-2 justify-between border border-line rounded-lg bg-white px-3 py-3">
+      <div className="flex flex-col sm:flex-row gap-3 sm:gap-2 justify-between rounded-lg bg-transparent py-3">
         <button className="inventory-button justify-start grow">
           <SearchIcon size={18} /> Search
         </button>
