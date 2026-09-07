@@ -3,22 +3,22 @@ import { ChevronDown, PlusIcon, SearchIcon } from "lucide-react";
 export default function Controls() {
   return (
     <div className="mb-5">
-      <div className="shadow-xl flex flex-row justify-between border-2 border-primaryBlue rounded-lg w-full px-3 py-5">
+      <div className="flex flex-col sm:flex-row gap-3 sm:gap-2 justify-between border border-line rounded-lg bg-white px-3 py-3">
         <button className="inventory-button justify-start grow">
-          {<SearchIcon size={18} />} Search
+          <SearchIcon size={18} /> Search
         </button>
-        <div className=" flex flex-row">
+        <div className="flex flex-wrap gap-2">
           <button className="inventory-button">
-            All Category {<ChevronDown size={18} />}
+            All category <ChevronDown size={16} />
           </button>
           <button className="inventory-button">
-            All Status {<ChevronDown size={18} />}
+            All status <ChevronDown size={16} />
           </button>
           <button className="inventory-button">
-            Recently Added {<ChevronDown size={18} />}
+            Recently added <ChevronDown size={16} />
           </button>
-          <button className="inventory-button bg-primaryBlue text-white border-primaryBlue hover:shadow-[0_0_20px_#386aed]">
-            {<PlusIcon size={18} />} Add New Item
+          <button className="inventory-button bg-ledger text-white border-ledger hover:bg-ledger/90">
+            <PlusIcon size={18} /> Add new item
           </button>
         </div>
       </div>
