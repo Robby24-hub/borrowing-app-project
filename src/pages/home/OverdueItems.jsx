@@ -9,7 +9,6 @@ export default function OverdueItems() {
       image: "/images/stapler.png",
       borrower: "John",
       dueDate: "2026-08-18",
-      status: "OVERDUE",
     },
     {
       id: crypto.randomUUID(),
@@ -17,7 +16,6 @@ export default function OverdueItems() {
       image: "/images/laptop.png",
       borrower: "Maria",
       dueDate: "2026-08-17",
-      status: "OVERDUE",
     },
     {
       id: crypto.randomUUID(),
@@ -25,50 +23,66 @@ export default function OverdueItems() {
       image: "/images/projector.png",
       borrower: "Alex",
       dueDate: "2026-08-15",
-      status: "OVERDUE",
     },
     {
       id: crypto.randomUUID(),
-      item: "Wireless Mouse",
-      borrower: "Sarah",
+      item: "Wireless mouse",
       image: "/images/wireless-mouse.png",
+      borrower: "Sarah",
       dueDate: "2026-08-14",
-      status: "OVERDUE",
     },
     {
       id: crypto.randomUUID(),
-      item: "HDMI Cable",
+      item: "HDMI cable",
       image: "/images/hdmi-cable.png",
       borrower: "Michael",
       dueDate: "2026-08-12",
-      status: "OVERDUE",
     },
   ];
 
   return (
-    <div>
-      <h1 className="text-xl font-semibold mb-2">Overdue Items</h1>
-      <div className="w-full grid gap-5 grid-cols-5 mb-5">
-        {overdueItems.map((item) => {
+    <div className="mb-10">
+      <div className="flex items-baseline justify-between mb-3">
+        <h2 className="font-display text-lg font-medium">Needs attention</h2>
+        <span className="text-xs text-ink/50">
+          {overdueItems.length} overdue
+        </span>
+      </div>
+
+      <div className="flex gap-4 overflow-x-auto pb-2 -mx-1 px-1">
+        {overdueItems.map((item, i) => {
+          const daysLate = dayjs().diff(dayjs(item.dueDate), "day");
+
           return (
             <div
-              className="bg-white border-2 border-primaryBlue flex flex-col items-center p-4 rounded-2xl shadow-xl "
               key={item.id}
+              className="overdue-ticket shrink-0 w-64 flex bg-white border border-rust/30 rounded-lg overflow-hidden shadow-sm"
+              style={{ animationDelay: `${i * 60}ms` }}
             >
               <div
-                className="bg-cover bg-center overflow-hidden aspect-square w-30 border my-5"
+                className="w-20 shrink-0 bg-cover bg-center bg-rust/5"
                 style={{ backgroundImage: `url(${item.image})` }}
-              ></div>
-              <p className="font-semibold text-xl mb-2">{item.item}</p>
-              <div className="flex flex-row">
-                <UserRoundIcon className="w-5 mx-2" />
-                <p className="">{item.borrower}</p>
+              />
+              <div className="border-l border-dashed border-rust/30 flex-1 p-3 flex flex-col justify-between">
+                <div>
+                  <p className="font-display font-medium leading-tight">
+                    {item.item}
+                  </p>
+                  <div className="flex items-center gap-1.5 text-xs text-ink/60 mt-1.5">
+                    <UserRoundIcon className="w-3.5 h-3.5" />
+                    {item.borrower}
+                  </div>
+                  <div className="flex items-center gap-1.5 text-xs text-ink/60 mt-1">
+                    <ClockAlertIcon className="w-3.5 h-3.5" />
+                    <span className="font-mono">
+                      {dayjs(item.dueDate).format("MMM D")}
+                    </span>
+                  </div>
+                </div>
+                <p className="text-xs font-medium text-rust mt-2">
+                  {daysLate} {daysLate === 1 ? "day" : "days"} late
+                </p>
               </div>
-              <div className="flex flex-row">
-                <ClockAlertIcon className="w-5 mx-2" />
-                <p className="">{dayjs(item.dueDate).format("MMM D, YYYY")}</p>
-              </div>
-              <p className="text-[#f15368] font-semibold mt-2">{item.status}</p>
             </div>
           );
         })}
