@@ -1,5 +1,5 @@
-import dayjs from "dayjs";
 import Controls from "./Controls";
+import ItemCard from "./ItemCard";
 
 export default function InventoryPage() {
   const inventoryItems = [
@@ -208,55 +208,20 @@ export default function InventoryPage() {
   return (
     <div>
       <div className="mb-4">
-        <h1 className="text-2xl font-semibold">Inventory</h1>
-        <p>Manage all your items.</p>
+        <h1 className="font-display text-2xl font-medium">Inventory</h1>
+        <p className="text-ink/60">Manage all your items.</p>
       </div>
+
       <Controls />
+
       <div>
-        <h1 className="text-xl font-semibold">42 items</h1>
-        <div className="bg-white w-full border-2 border-primaryBlue rounded-lg overflow-hidden shadow-xl mb-5">
-          <div className="bg-grayishWhite trow-inventory">
-            <p className="tdata tdataHead">Item</p>
-            <p className="tdata tdataHead">Category</p>
-            <p className="tdata tdataHead">Status</p>
-            <p className="tdata tdataHead">Borrower</p>
-            <p className="tdata tdataHead">Due Date</p>
-            <p className="tdata tdataHead">Date Added</p>
-          </div>
-          {inventoryItems.map((inventoryItem) => {
-            return (
-              <div className="trow-inventory" key={inventoryItem.id}>
-                <div className="flex flex-row items-center justify-start">
-                  <div
-                    className="aspect-square w-5 border bg-center bg-cover"
-                    style={{ backgroundImage: `url(${inventoryItem.image})` }}
-                  ></div>
-                  <p className="tdata ml-2">{inventoryItem.name}</p>
-                </div>
-                <p className="tdata">{inventoryItem.category}</p>
-                <p
-                  className={`tdata font-semibold
-                    ${inventoryItem.status === "Available" && "text-availableGreen"}
-                    ${inventoryItem.status === "Borrowed" && "text-borrowedYellow"}
-                    ${inventoryItem.status === "Overdue" && "text-overdueRed"}
-                  `}
-                >
-                  {inventoryItem.status}
-                </p>
-                <p className="tdata">
-                  {inventoryItem.borrower ? inventoryItem.borrower : "---"}
-                </p>
-                <p className="tdata">
-                  {inventoryItem.dueDate
-                    ? dayjs(inventoryItem.dueDate).format("MMM D, YYYY")
-                    : "---"}
-                </p>
-                <p className="tdata">
-                  {dayjs(inventoryItem.dateAdded).format("MMM D, YYYY")}
-                </p>
-              </div>
-            );
-          })}
+        <h2 className="text-sm text-ink/50 mb-3">
+          {inventoryItems.length} items
+        </h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+          {inventoryItems.map((item) => (
+            <ItemCard key={item.id} item={item} />
+          ))}
         </div>
       </div>
     </div>
