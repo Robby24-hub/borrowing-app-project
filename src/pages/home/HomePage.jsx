@@ -5,11 +5,16 @@ import RecentActivities from "./RecentActivities";
 
 export default function HomePage() {
   return (
-    <div>
-      <div className="mb-4">
-        <h1 className="text-2xl font-semibold">Hello, Robby!</h1>
-        <p>This is what's happening with your inventory.</p>
+    <div className="max-w-6xl mx-auto px-6 py-10 font-sans text-ink">
+      <div className="mb-8">
+        <h1 className="font-display text-3xl font-medium text-ink">
+          Hello, Robby
+        </h1>
+        <p className="text-ink/60 mt-1">
+          Here's what's happening with your inventory today.
+        </p>
       </div>
+
       <DataSummary />
       <QuickActions />
       <OverdueItems />
