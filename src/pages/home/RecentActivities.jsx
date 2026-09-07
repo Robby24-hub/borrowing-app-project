@@ -32,34 +32,48 @@ export default function RecentActivities() {
     },
     {
       id: crypto.randomUUID(),
-      item: "Wireless Microphone",
+      item: "Wireless microphone",
       action: "Borrowed",
       person: "David",
       date: "2026-08-21T10:05:00",
     },
   ];
+
   return (
     <div>
-      <h1 className="text-xl font-semibold mb-2 ">Recent Activity</h1>
-      <div className="bg-white border-2 border-primaryBlue rounded-lg overflow-hidden w-fit shadow-xl mb-5">
-        <div className="bg-grayishWhite trow-recent-act">
-          <p className="tdata tdataHead">Item</p>
-          <p className="tdata tdataHead">Action</p>
-          <p className="tdata tdataHead">Person</p>
-          <p className="tdata tdataHead">Due Date</p>
+      <h2 className="font-display text-lg font-medium mb-3">Recent activity</h2>
+      <div className="border border-line rounded-md overflow-hidden">
+        <div className="grid grid-cols-4 bg-paper text-xs text-ink/50 border-b border-line">
+          <p className="p-3">Item</p>
+          <p className="p-3">Action</p>
+          <p className="p-3">Person</p>
+          <p className="p-3">When</p>
         </div>
-        {recentActivities.map((activity) => {
-          return (
-            <div className="trow-recent-act" key={activity.id}>
-              <p className="tdata">{activity.item}</p>
-              <p className="tdata">{activity.action}</p>
-              <p className="tdata">{activity.person}</p>
-              <p className="tdata">
-                {dayjs(activity.date).format("MMM D, YYYY | h:mm A")}
-              </p>
-            </div>
-          );
-        })}
+        {recentActivities.map((activity, i) => (
+          <div
+            key={activity.id}
+            className={`grid grid-cols-4 items-center text-sm ${
+              i !== recentActivities.length - 1 ? "border-b border-line" : ""
+            }`}
+          >
+            <p className="p-3 font-medium">{activity.item}</p>
+            <p className="p-3">
+              <span
+                className={`text-xs font-medium px-2 py-0.5 rounded-full ${
+                  activity.action === "Borrowed"
+                    ? "bg-ochre/10 text-ochre"
+                    : "bg-moss/10 text-moss"
+                }`}
+              >
+                {activity.action}
+              </span>
+            </p>
+            <p className="p-3 text-ink/70">{activity.person}</p>
+            <p className="p-3 font-mono text-xs text-ink/60">
+              {dayjs(activity.date).format("MMM D, h:mm A")}
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   );
