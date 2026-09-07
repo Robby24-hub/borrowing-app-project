@@ -9,64 +9,54 @@ export default function DataSummary() {
   const summaryData = [
     {
       id: 1,
-      image: BoxesIcon,
-      title: "Total Items",
+      icon: BoxesIcon,
+      title: "Total items",
       value: 248,
-      description: "Items registered",
+      description: "Registered in inventory",
+      accent: "text-ink",
     },
     {
       id: 2,
-      image: HandHelpingIcon,
+      icon: HandHelpingIcon,
       title: "Borrowed",
       value: 57,
-      description: "Currently borrowed",
+      description: "Currently out",
+      accent: "text-ochre",
     },
     {
       id: 3,
-      image: ListCheckIcon,
+      icon: ListCheckIcon,
       title: "Available",
       value: 191,
-      description: "Ready to borrow",
+      description: "Ready to lend",
+      accent: "text-moss",
     },
     {
       id: 4,
-      image: ClockAlertIcon,
+      icon: ClockAlertIcon,
       title: "Overdue",
       value: 5,
       description: "Past due date",
+      accent: "text-rust",
     },
   ];
 
   return (
-    <div className="grid grid-cols-4 my-5 gap-4">
-      {summaryData.map((boxItem) => {
-        const Icon = boxItem.image;
-
-        return (
-          <div
-            key={boxItem.id}
-            className={`shadow-xl border-2 p-4 rounded-lg flex flex-row
-                ${boxItem.title === "Total Items" && "border-primaryBlue bg-primaryBlue/15"}
-                ${boxItem.title === "Borrowed" && "border-borrowedYellow bg-borrowedYellow/15"}
-                ${boxItem.title === "Available" && "border-availableGreen bg-availableGreen/15"}
-                ${boxItem.title === "Overdue" && "border-overdueRed bg-overdueRed/15"}`}
-          >
-            <Icon
-              className={`aspect-square mr-3 w-15 h-15
-              ${boxItem.title === "Total Items" && "text-primaryBlue"}
-              ${boxItem.title === "Borrowed" && "text-borrowedYellow"}
-              ${boxItem.title === "Available" && "text-availableGreen"}
-              ${boxItem.title === "Overdue" && "text-overdueRed"}
-              `}
-            />
-            <div>
-              <h1 className="text-xl font-semibold">{boxItem.title}</h1>
-              <p className="text-3xl font-bold">{boxItem.value}</p>
-              <p>{boxItem.description}</p>
+    <div className="mb-10 border border-line rounded-md bg-white/60 grid grid-cols-2 sm:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-line">
+      {summaryData.map(
+        ({ id, icon: Icon, title, value, description, accent }) => (
+          <div key={id} className="p-5 flex flex-col gap-3">
+            <div className="flex items-center justify-between">
+              <span className="text-sm text-ink/60">{title}</span>
+              <Icon className={`w-4 h-4 ${accent}`} strokeWidth={1.75} />
             </div>
+            <p className={`font-mono text-3xl font-medium ${accent}`}>
+              {value}
+            </p>
+            <p className="text-xs text-ink/50">{description}</p>
           </div>
-        );
-      })}
+        ),
+      )}
     </div>
   );
 }
