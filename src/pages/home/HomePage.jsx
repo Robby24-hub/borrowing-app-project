@@ -5,7 +5,7 @@ import RecentActivities from "./RecentActivities";
 
 export default function HomePage() {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-10 font-sans text-ink">
+    <div className="font-sans text-ink">
       <div className="mb-8">
         <h1 className="font-display text-3xl font-medium text-ink">
           Hello, Robby

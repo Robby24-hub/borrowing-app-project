@@ -11,7 +11,7 @@ export default function InventoryPage() {
       borrower: null,
       dueDate: null,
       dateAdded: "2026-08-28",
-      image: "/images/nintendo-switch.png",
+      image: "/images/wireless-mouse.png",
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ export default function InventoryPage() {
       borrower: "John Smith",
       dueDate: "2026-09-03",
       dateAdded: "2026-08-27",
-      image: "/images/calculus-book.png",
+      image: "/images/laptop.png",
     },
     {
       id: 3,
@@ -31,7 +31,7 @@ export default function InventoryPage() {
       borrower: null,
       dueDate: null,
       dateAdded: "2026-08-26",
-      image: "/images/usb-keyboard.png",
+      image: "/images/projector.png",
     },
     {
       id: 4,
@@ -71,7 +71,7 @@ export default function InventoryPage() {
       borrower: null,
       dueDate: null,
       dateAdded: "2026-08-22",
-      image: "/images/calculator.png",
+      image: "/images/hdmi-cable.png",
     },
     {
       id: 8,
@@ -91,7 +91,7 @@ export default function InventoryPage() {
       borrower: null,
       dueDate: null,
       dateAdded: "2026-08-20",
-      image: "/images/javascript-book.png",
+      image: "/images/projector.png",
     },
     {
       id: 10,
@@ -101,7 +101,7 @@ export default function InventoryPage() {
       borrower: null,
       dueDate: null,
       dateAdded: "2026-08-19",
-      image: "/images/extension-cord.png",
+      image: "/images/hdmi-cable.png",
     },
     {
       id: 11,
@@ -111,7 +111,7 @@ export default function InventoryPage() {
       borrower: "Michael Tan",
       dueDate: "2026-09-06",
       dateAdded: "2026-08-18",
-      image: "/images/web-development-book.png",
+      image: "/images/laptop.png",
     },
     {
       id: 12,
@@ -121,7 +121,7 @@ export default function InventoryPage() {
       borrower: null,
       dueDate: null,
       dateAdded: "2026-08-17",
-      image: "/images/usb-flash-drive.png",
+      image: "/images/wireless-mouse.png",
     },
     {
       id: 13,
@@ -131,7 +131,7 @@ export default function InventoryPage() {
       borrower: null,
       dueDate: null,
       dateAdded: "2026-08-16",
-      image: "/images/mouse-pad.png",
+      image: "/images/projector.png",
     },
     {
       id: 14,
@@ -141,7 +141,7 @@ export default function InventoryPage() {
       borrower: "Daniel Garcia",
       dueDate: "2026-09-04",
       dateAdded: "2026-08-15",
-      image: "/images/arduino.png",
+      image: "/images/hdmi-cable.png",
     },
     {
       id: 15,
@@ -151,7 +151,7 @@ export default function InventoryPage() {
       borrower: null,
       dueDate: null,
       dateAdded: "2026-08-14",
-      image: "/images/soldering-iron.png",
+      image: "/images/projector.png",
     },
     {
       id: 16,
@@ -161,7 +161,7 @@ export default function InventoryPage() {
       borrower: null,
       dueDate: null,
       dateAdded: "2026-08-13",
-      image: "/images/vga-cable.png",
+      image: "/images/hdmi-cable.png",
     },
     {
       id: 17,
@@ -171,7 +171,7 @@ export default function InventoryPage() {
       borrower: "Kevin Lopez",
       dueDate: "2026-09-07",
       dateAdded: "2026-08-12",
-      image: "/images/physics-book.png",
+      image: "/images/laptop.png",
     },
     {
       id: 18,
@@ -181,7 +181,7 @@ export default function InventoryPage() {
       borrower: null,
       dueDate: null,
       dateAdded: "2026-08-11",
-      image: "/images/webcam.png",
+      image: "/images/projector.png",
     },
     {
       id: 19,
@@ -191,7 +191,7 @@ export default function InventoryPage() {
       borrower: null,
       dueDate: null,
       dateAdded: "2026-08-10",
-      image: "/images/ethernet-cable.png",
+      image: "/images/hdmi-cable.png",
     },
     {
       id: 20,
@@ -201,7 +201,7 @@ export default function InventoryPage() {
       borrower: "Jessica Lim",
       dueDate: "2026-08-27",
       dateAdded: "2026-08-09",
-      image: "/images/tablet.png",
+      image: "/images/projector.png",
     },
   ];
 
